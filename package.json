@@ -1,0 +1,31 @@
+{
+  "name": "tree-shake",
+  "version": "1.0.0",
+  "description": "Test tree-shakeability",
+  "main": "index.js",
+  "files": [
+    "treeShake.js",
+    "dist"
+  ],
+  "bin": {
+    "treeshake": "treeshake"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tree-shake",
+    "tree-shaking",
+    "javascript",
+    "esm",
+    "es6",
+    "modules",
+    "package"
+  ],
+  "author": "Igor L Irianto <igoririanto@rocketmail.com>",
+  "license": "mit",
+  "dependencies": {
+    "rollup": "^1.16.2",
+    "rollup-plugin-virtual": "^1.0.1"
+  }
+}
