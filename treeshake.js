@@ -33,6 +33,7 @@ const entry = getEntryFromPackageJSON();
 
 const bundleCodeIntoESM = entry => {
   const resolvedEntry = path.resolve(entry);
+  console.info("********** reading code **********");
 
   return rollup({
     input: "treeshake",
@@ -47,49 +48,32 @@ const bundleCodeIntoESM = entry => {
   })
     .then(bundle => bundle.generate({ format: "esm" }))
     .then(output => {
-      /*
-       *[Object: null prototype] {
-  '/Users/iggy/bloc/write-code/tree-shake/index.js':
-   { renderedExports: [],
-     removedExports: [ 'default' ],
-     renderedLength: 19,
-     originalLength: 192 },
-  '\u0000virtual:treeshake':
-   { renderedExports: [],
-     removedExports: [],
-     renderedLength: 0,
-     originalLength: 56 } }
-       * */
-      // first, determine whether it passes or not
-      // second, if it does NOT pass, find EACH object keys that do not pass 100% render
-      // third, display above filename, and how many % rendered
       const trimmedCodeOutput = output.code.trim();
       const fullyTreeShakeable = trimmedCodeOutput === "";
-      console.log("trimmedCodeOutput: ", fullyTreeShakeable);
+
       if (fullyTreeShakeable) {
-        console.log("Awesome! Code is 100% tree-shakeable");
+        console.info("Awesome! Code is 100% tree-shakeable");
         return;
       }
-      const outputModuleKeys = Object.keys(output.modules);
+      const outputModuleKeys = Object.keys(output.modules).slice(0, -1);
 
       outputModuleKeys.forEach(outputModuleKey => {
-        console.log("each key:");
         const outputModule = output.modules[outputModuleKey];
-        console.log(outputModule);
         const renderedLength = outputModule.renderedLength;
         const originalLength = outputModule.originalLength;
         const percentRendered = (
           ((originalLength - renderedLength) / originalLength) *
           100
         ).toFixed(2);
-        console.log("percentRendered: ", percentRendered);
-        if (percentRendered < 100) {
-          console.log(
-            `${outputModuleKey} is ${percentRendered}% tree-shakeable`
-          );
-        }
+
+        console.info(
+          `${outputModuleKey} is ${percentRendered}% tree-shakeable`
+        );
       });
-      console.log(output.modules);
+      console.info("Responsible codes: ");
+      console.info(output.code);
+
+      console.info("********** Finished Reading **********");
       return output;
     });
 };

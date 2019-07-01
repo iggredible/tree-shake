@@ -1,9 +1,7 @@
-import fs from "fs";
-console.log("HEY");
-// why is output.code display nothing? Should it display something?
+const fs = require("fs");
 //
 function module1() {
   console.log("index module1");
 }
 
-export default module1;
+export default { foo: "bar" };
