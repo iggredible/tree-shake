@@ -46,7 +46,7 @@ const bundleCodeIntoESM = entry => {
       const fullyTreeShakeable = trimmedCodeOutput === "";
 
       if (fullyTreeShakeable) {
-        console.info("Awesome! Code is 100% tree-shakeable");
+        console.info(tree);
         return;
       }
       const outputModuleKeys = Object.keys(output.modules).slice(0, -1);
@@ -66,3 +66,18 @@ const bundleCodeIntoESM = entry => {
     });
 };
 module.exports = { getEntryFromPackageJSON, bundleCodeIntoESM };
+
+const tree = `
+     tree88shakey
+  TREESHAKEtRe eSha
+ kETREESHaKetreeshAKE
+TreeShakEY o0o tREeSHAKE
+    Es6  /T r eesHakeY
+      \\\///  /Thanks
+        \\\//////
+         |||||
+         |||||
+         |||||
+   .....//||||\\....
+Awesome! Your code is 100% tree-shakeable!
+`;
