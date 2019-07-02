@@ -47,8 +47,6 @@ console.log("Side-effects");
 
 ## How do I make my project tree-shakeable?
 
-![tree-shaking](readme_assets/treeshake.gif)
-
 1. Use ES6's [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
 2. As much as possible, not have [side-effects](https://stackoverflow.com/questions/8129105/javascript-closures-and-side-effects-in-plain-english-separately)
 
