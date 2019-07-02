@@ -8,7 +8,7 @@ With treeshake, you can find out which files and code lines that are not tree-sh
 
 ## Usage
 
-Simply run `npx treeshake` in your project root. Make sure you have your entry point defined in `package.json` under either `"module"` or `"main"`.
+Simply run `npx treeshake` in your project root. **Make sure** you have your entry point defined in `package.json` under either `"module"` or `"main"`.
 
 Upon running, you'll get notification whether your code is 100% tree-shakeable or not. If not, it will tell which file(s) are causing/ affected by side-effects and the codes that caused it.
 

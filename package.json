@@ -1,11 +1,11 @@
 {
   "name": "tree-shake",
   "version": "1.0.1",
-  "description": "Test tree-shakeability",
+  "description": "Test if a package is 100% tree-shakeable",
   "main": "main.js",
   "files": [
     "treeShake.js",
-    "dist"
+    "main.js"
   ],
   "bin": {
     "treeshake": "treeshake.js"
