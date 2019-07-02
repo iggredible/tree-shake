@@ -47,12 +47,14 @@ console.log("Side-effects");
 
 ## How do I make my project tree-shakeable?
 
+![tree-shaking](readme_assets/treeshake.gif)
+
 1. Use ES6's [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
 2. As much as possible, not have [side-effects](https://stackoverflow.com/questions/8129105/javascript-closures-and-side-effects-in-plain-english-separately)
 
-For more on tree-shaking, check out this [awesome blog](https://medium.com/@Rich_Harris/tree-shaking-versus-dead-code-elimination-d3765df85c80#.jnypozs9n) by Rich Harris.
 
-## More resources on JS modules
+### More resources on JS modules
+- [Dead code elimination vs tree shaking](https://medium.com/@Rich_Harris/tree-shaking-versus-dead-code-elimination-d3765df85c80#.jnypozs9n) 
 - [Anatomy of JS module systems](https://www.freecodecamp.org/news/anatomy-of-js-module-systems-and-building-libraries-fadcd8dbd0e/)
 - [JS module system](https://github.com/kamleshchandnani/js-module-system)
 - [RollupJS](https://rollupjs.org/guide/en/)
@@ -61,4 +63,5 @@ For more on tree-shaking, check out this [awesome blog](https://medium.com/@Rich
 - [ESM cartoon](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
 - [Why you should use ESM](https://dev.to/bennypowers/you-should-be-using-esm-kn3)
 - [Does node run all code inside required modules?](https://stackoverflow.com/questions/40464552/does-node-run-all-the-code-inside-required-modules)
+
 
