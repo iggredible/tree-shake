@@ -62,4 +62,5 @@ console.log("Side-effects");
 - [Why you should use ESM](https://dev.to/bennypowers/you-should-be-using-esm-kn3)
 - [Does node run all code inside required modules?](https://stackoverflow.com/questions/40464552/does-node-run-all-the-code-inside-required-modules)
 
-
+<hr />
+Please feel free to ask any question/ submit PR!

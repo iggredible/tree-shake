@@ -1,6 +1,6 @@
 {
   "name": "tree-shake",
-  "version": "1.0.1",
+  "version": "1.0.4,
   "description": "Test if a package is 100% tree-shakeable",
   "main": "main.js",
   "files": [
@@ -17,7 +17,8 @@
     "esm",
     "es6",
     "modules",
-    "package"
+    "package",
+    "dead code elimination"
   ],
   "author": "Igor L Irianto <igoririanto@rocketmail.com>",
   "license": "mit",
