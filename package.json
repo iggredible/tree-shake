@@ -1,6 +1,6 @@
 {
   "name": "tree-shake",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Test if a package is 100% tree-shakeable",
   "main": "main.js",
   "files": [
@@ -25,5 +25,9 @@
   "dependencies": {
     "rollup": "^0.64.1",
     "rollup-plugin-virtual": "^1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iggredible/tree-shake"
   }
 }
